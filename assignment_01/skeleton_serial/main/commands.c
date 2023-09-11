@@ -36,6 +36,7 @@ void init_Command(Command * cmd) {
 int parse_input(const char* in_msg, Command* out_cmd);
 
 int process_cmd_mac(const Command* in_cmd, char* out_msg);
+int process_cmd_id(const Command* in_cmd, char* out_msg);
 int process_cmd_status(const Command* in_cmd, char* out_msg);
 int process_cmd_dec(const Command* in_cmd, char* out_msg);
 
@@ -63,7 +64,7 @@ int process_command(const char* in_msg, char* out_msg) {
 			break;
 
 		case COMMAND_ID:
-			// ...
+			command_result = process_cmd_id(&cmd, str_buffer);
 			break;
 
 		case COMMAND_STATUS:
@@ -162,9 +163,13 @@ void mac_to_string(const uint8_t* mac, char* out) {
 	}
 }
 
+int process_cmd_id(const Command* in_cmd, char* out_msg) {
+  strcpy(out_msg, "IMPLEMENT..");
+  return 0;
+}
 
 int process_cmd_status(const Command* in_cmd, char* out_msg) {
-	strcpy(out_msg, "IMPLEMENT..");
+	strcpy(out_msg, "(ttb3@hi.is, tumi@juni.is)");
 	return 0;
 }
 
