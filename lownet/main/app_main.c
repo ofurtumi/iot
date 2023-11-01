@@ -47,7 +47,7 @@ void id() {
 void date() {
   lownet_time_t time = lownet_get_time();
   // make sure that if both seconds and parts are 0 we print an error and return
-  if (time.seconds + time.parts == 0) {
+  if (time.seconds == 0 && time.parts == 0) {
     serial_write_line("Network time is not available.\n");
     return;
   }
@@ -89,6 +89,9 @@ void app_main(void) {
     memset(msg_out, 0, MSG_BUFFER_LENGTH);
 
     if (!serial_read_line(msg_in)) {
+      if (msg_in[0] == '\0') {
+        continue;
+      }
       // Quick & dirty input parse.  Presume input length > 0.
       if (msg_in[0] == '/') {
 
