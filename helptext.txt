@@ -1,0 +1,18 @@
+1.
+Home Assistant is an open-source home automation platform that allows you to control and automate all of your smart devices from a single interface.
+
+It is incredibly flexible and customizable, so you can create automations that fit your exact need and there are always new integrations and features being developed.
+
+2.
+You can use Home Assistant to control your smart home devices, like lights, switches, thermostats, and more.
+But it can also be used for other things like monitoring your home security system or even controlling your TV with voice commands.
+Using some plugins you can even connect it to your own microcontrollers like for example an esp32.
+
+3.
+To get started with Home Assistant you some sort of a wifi capable device like a Raspberry Pi, howevere if a Pi isn't available old laptops or even smartphones can act as hosts.
+
+Then you need to configure devices that you want to control and automate. Since Home Assistant is open source, there are many different ways to do this depending on what type of device you're using but there is also lots of documentation available online.
+
+4.
+Home Assistant is a great platform whether you are just trying to turn a single light off and on from your computer or automating every single aspect of your life.
+With the ESPHome plugin (or something similar) the possibilities become endless and the only roadblock is your imagination.
